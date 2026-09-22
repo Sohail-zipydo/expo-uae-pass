@@ -46,7 +46,7 @@ class UAEPassModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
     @ReactMethod
     fun launchUAEPassApp(packageName: String, deepLinkUrl: String, promise: Promise) {
         try {
-            val activity = currentActivity
+            val activity = reactApplicationContext.currentActivity
             if (activity == null) {
                 promise.reject("ERROR", "Activity is null")
                 return
@@ -75,7 +75,7 @@ class UAEPassModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
     @ReactMethod
     fun openUAEPassWithIntent(authUrl: String, callbackUrl: String, packageName: String, promise: Promise) {
         try {
-            val activity = currentActivity
+            val activity = reactApplicationContext.currentActivity
             if (activity == null) {
                 promise.reject("ERROR", "Activity is null")
                 return
@@ -105,7 +105,7 @@ class UAEPassModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
                 val scheme = if (packageName.contains(".stg")) "uaepassstg" else "uaepass"
                 val fallbackIntent = Intent(Intent.ACTION_VIEW, Uri.parse("\${scheme}://"))
                 fallbackIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                currentActivity?.startActivity(fallbackIntent)
+                reactApplicationContext.currentActivity?.startActivity(fallbackIntent)
                 promise.resolve(true)
             } catch (e2: Exception) {
                 promise.reject("ERROR", "Error launching UAE Pass: \${e2.message}", e2)

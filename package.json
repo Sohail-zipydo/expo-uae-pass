@@ -33,25 +33,25 @@
     "url": "https://github.com/ArslanKhan-info/expo-uae-pass/issues"
   },
   "peerDependencies": {
-    "react": ">=18.0.0",
-    "react-native": ">=0.70.0",
-    "expo": ">=49.0.0",
-    "expo-linking": "*",
-    "expo-web-browser": "*",
-    "expo-auth-session": "*",
-    "react-native-webview": "*"
+    "expo": ">=57 <58",
+    "expo-auth-session": ">=57 <58",
+    "expo-linking": ">=57 <58",
+    "expo-web-browser": ">=57 <58",
+    "react": ">=19.2.3 <20",
+    "react-native": ">=0.86 <0.87",
+    "react-native-webview": ">=13.16 <14"
   },
   "devDependencies": {
-    "@types/react": "^18.0.0",
-    "@types/react-native": "^0.72.0",
-    "typescript": "^5.0.0",
-    "expo": "^54.0.0",
-    "expo-linking": "^7.0.0",
-    "expo-web-browser": "^14.0.0",
-    "expo-auth-session": "^6.0.0",
-    "react-native-webview": "^13.0.0",
-    "react": "^18.0.0",
-    "react-native": "^0.70.0"
+    "@types/react": "~19.2.3",
+    "expo": "^57.0.24",
+    "expo-auth-session": "~57.0.12",
+    "expo-crypto": "~57.0.3",
+    "expo-linking": "~57.0.10",
+    "expo-web-browser": "~57.0.3",
+    "react": "19.2.3",
+    "react-native": "0.86.0",
+    "react-native-webview": "13.16.1",
+    "typescript": "^5.0.0"
   },
   "files": [
     "lib",
