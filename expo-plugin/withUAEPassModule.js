@@ -235,7 +235,7 @@ function withUAEPassModule(config) {
 
       // 3) Patch MainApplication.kt to register UAEPassPackage
       const importStatement = `import ${uaePassSubpackage}.UAEPassPackage`;
-      const addStatement = 'packages.add(UAEPassPackage())';
+      const addStatement = 'add(UAEPassPackage())';
       const alreadyHasRegistration =
         mainApplicationContent.includes('UAEPassPackage()') ||
         mainApplicationContent.includes('UAEPassPackage ()');
